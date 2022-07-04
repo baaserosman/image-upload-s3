@@ -34,18 +34,22 @@ function App() {
     <div className="App">
       <form onSubmit={submit}>
         <input onChange={fileSelected} type="file" accept="image/*"></input>
-        <input value={description} onChange={e => setDescription(e.target.value)} type="text"></input>
+        <input
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          type="text"
+        ></input>
         <button type="submit">Submit</button>
       </form>
 
-      { images.map( image => (
+      {images.map((image) => (
         <div key={image}>
           <img src={image}></img>
         </div>
       ))}
 
-      <img src="/images/9fa06d3c5da7aec7f932beb5b3e60f1d"></img>
-
+      {/* <img src="/images/9fa06d3c5da7aec7f932beb5b3e60f1d"></img> */}
+      <img src="https://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/images/code-samples-s3.png"></img>
     </div>
   );
 }
